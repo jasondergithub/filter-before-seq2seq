@@ -63,7 +63,7 @@ def run_train(tableNumber):
     )
     #########
 
-    for epoch in range(config.EPOCHS):
+    for epoch in range(10):
         outputs, targets, loss = engine.train_fn(encoder_data_loader, decoder_data_loader, model, optimizer, device, scheduler)
         print(f'Epoch:{epoch+1}, Loss:{loss:.4f}')
 
