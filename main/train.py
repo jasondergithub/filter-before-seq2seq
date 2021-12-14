@@ -67,7 +67,7 @@ def run_train(tableNumber):
         outputs, targets, loss = engine.train_fn(encoder_data_loader, decoder_data_loader, model, optimizer, device, scheduler)
         print(f'Epoch:{epoch+1}, Loss:{loss:.4f}')
 
-        outputs = np.array(outputs) >= 0.8
+        outputs = np.array(outputs) >= 0.85
         accuracy = metrics.accuracy_score(targets, outputs)
         fScore = f1_score(targets, outputs)
         print(f"After training {epoch+1} epoch(s), Accuracy Score = {accuracy}")

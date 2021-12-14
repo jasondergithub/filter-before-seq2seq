@@ -32,7 +32,7 @@ model.to(device)
 
 
 outputs = engine.eval_fn(encoder_data_loader, decoder_data_loader, model, device)
-outputs = np.array(outputs) >= 0.8
+outputs = np.array(outputs) >= 0.85
 
 with open('../dict/private_test.txt', 'rb') as fp:
      table = pickle.load(fp)
