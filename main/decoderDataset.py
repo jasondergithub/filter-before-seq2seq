@@ -14,7 +14,7 @@ class TestDataset(Dataset):
             with open('../table/table'+ str(tableNumber) +'.txt', 'rb') as fp:
                 table = pickle.load(fp)
         else:
-            with open('../dict/private_test.txt', 'rb') as fp:
+            with open('../dict/filter_test.txt', 'rb') as fp:
                 table = pickle.load(fp)
         self.pairingTable =table 
         self.len = len(table)
